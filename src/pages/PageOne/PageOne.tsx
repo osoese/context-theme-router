@@ -12,13 +12,18 @@ const PageOne = () => {
   return (
     <div className={`p1p-${theme.toString().toLowerCase()}`}>
         <div style={{margin:'20px'}}>
-          <span style={{padding:'5px'}}>this little component is nested in page one</span>
+          <span style={{padding:'5px'}}>this Mode component toggles between light and dark mode and is nested in page one</span>
             <Mode />
           <span style={{padding:'5px'}}>i'm in the process of refining the css</span>
         </div>
         <div className={`p1p-wrap-${theme.toString().toLowerCase()}`}>
-          <Media url="https://ipfs.io/ipfs/QmWJ3HnbLKm3WM2rkjugbUJ1tNj5iWLb8ZbUJUw5GkhWmJ" />
-          <Media url="https://ipfs.io/ipfs/QmcNtgAdi9fnHWHQa5QxWLFtRYNuyiHCe8VJyYXxLm55HX" />
+          <span style={{padding:'5px'}}>this Media component calls an ipfs gif image and is nested in page one</span>
+            <Media url="https://ipfs.io/ipfs/QmWJ3HnbLKm3WM2rkjugbUJ1tNj5iWLb8ZbUJUw5GkhWmJ" />
+          <span style={{padding:'5px'}}>this Media component calls an ipfs video (mp4) and is nested in page one</span>
+            <Media url="https://ipfs.io/ipfs/QmcNtgAdi9fnHWHQa5QxWLFtRYNuyiHCe8VJyYXxLm55HX" />
+          <span style={{padding:'5px'}}>i'm in the process of refining the css</span>
+        </div>
+        <div className={`p1p-wrap-${theme.toString().toLowerCase()}`}>
           <p>Page One needs some style</p>
           <p>PageTwo is the component 👇</p>
         </div>

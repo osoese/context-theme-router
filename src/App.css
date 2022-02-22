@@ -1,5 +1,3 @@
-p h2 { overflow:auto }
-
 .App {
   overflow-wrap: break-word;
 }
@@ -80,6 +78,7 @@ nav {
   background-color: #5c85d6;
   padding:30px;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 
 .Body-wrap {
