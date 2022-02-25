@@ -13,18 +13,8 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(5px + 2vmin);
-  color: white;
-}
-
 .App-header-light {
-  background-color: #FFFFFF;
-  min-height: 100vh;
+  background-color: #CCCCCC;
   display: flex;
   flex-direction: column;
   font-size: calc(5px + 2vmin);
@@ -32,8 +22,7 @@
 }
 
 .App-header-dark {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #86463F ;
   display: flex;
   flex-direction: column;
   font-size: calc(5px + 2vmin);
@@ -46,6 +35,7 @@
 
 nav {
   display: inline-flex;
+  gap: 12px;
 }
 
 .Nav-light {
@@ -53,16 +43,40 @@ nav {
   padding:5px 12px;
 }
 
+.Nav-light:hover {
+  border-top: 4px solid green;
+  border-bottom: 0.5px solid green;
+}
+
+.Nav-light-active {
+  display:inline;
+  padding:5px 12px;
+  border-top: 4px solid purple;
+  border-bottom: 0.5px solid purple;
+}
+
 .Nav-dark {
   display:inline;
   padding:5px 12px;
 }
 
+.Nav-dark:hover {
+  border-top: 4px solid green;
+}
+
+.Nav-dark-active {
+  display:inline;
+  padding:5px 12px;
+  border-top: 4px solid purple;
+  border-bottom: 0.5px solid purple;
+}
+
 .header-page-container {
-  border: 1px solid blue;
+  background-color: orange;
+  border: 1px solid orange;
   border-radius: 20px;
-  padding: 5%;
-  margin: 2%;
+  padding: 0.5%;
+  margin: 1%;
 }
 
 .page-wrapper {

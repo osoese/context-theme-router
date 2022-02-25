@@ -46,7 +46,7 @@ export default function Media(props:any) {
                     :
                     <span>nothing</span>
                 }
-                <span>{contentType}</span>
+                <div>{contentType}</div>
             </div>
           </div>
         </>

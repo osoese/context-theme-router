@@ -5,6 +5,7 @@
 }
 
 .p1p-light {
+  background-color: #FFFFFF;
   color: blue;
   border:1px solid red;
   border-radius:15px;
@@ -12,6 +13,7 @@
 }
 
 .p1p-dark {
+  background-color: #282c34;
   border:1px solid #CCCFCC;
   border-radius:15px;
   padding:15px;
@@ -50,4 +52,9 @@
   border-radius:12px;
   padding:20px;
   margin: 5px;
+}
+
+.divRow {
+  display:flex;
+  flex-direction: row;
 }

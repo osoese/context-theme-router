@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './App.css';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import { ThemeContext, Theme } from './ThemeContext';
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import Mode from './components/Mode/Mode';
@@ -19,8 +19,12 @@ function App() {
             <div className="header-route-container">
               <nav>
                 <Mode />
-                <Link className={`Nav-${theme.toString().toLowerCase()}`} to="/">Home</Link>
-                <Link className={`Nav-${theme.toString().toLowerCase()}`} to="/about">About</Link>
+                <NavLink
+                  className={({ isActive }) => (isActive ? `Nav-${theme.toString().toLowerCase()}-active` : `Nav-${theme.toString().toLowerCase()}`)}
+                  to="/">Home</NavLink>
+                <NavLink
+                  className={({ isActive }) => (isActive ? `Nav-${theme.toString().toLowerCase()}-active` : `Nav-${theme.toString().toLowerCase()}`)}
+                  to="/about">About</NavLink>
               </nav>
               <Routes>
                 <Route path="/" element={<Home />} />

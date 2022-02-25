@@ -17,11 +17,17 @@ const PageOne = () => {
           <span style={{padding:'5px'}}>i'm in the process of refining the css</span>
         </div>
         <div className={`p1p-wrap-${theme.toString().toLowerCase()}`}>
-          <span style={{padding:'5px'}}>this Media component calls an ipfs gif image and is nested in page one</span>
+          <span style={{padding:'15px'}}>this Media component calls an ipfs gif image and is nested in page one</span>
+          <div className={`divRow`}>
             <Media url="https://ipfs.io/ipfs/QmWJ3HnbLKm3WM2rkjugbUJ1tNj5iWLb8ZbUJUw5GkhWmJ" />
-          <span style={{padding:'5px'}}>this Media component calls an ipfs video (mp4) and is nested in page one</span>
+            <Media url="https://ipfs.io/ipfs/Qmeio5BXCSTmnuu6SXznXpSiaZpBDewoThQXDs5kpcS3iM" />
+          </div>
+          <span style={{padding:'15px'}}>this Media component calls an ipfs video (mp4) and is nested in page one</span>
+          <div className={`divRow`}>
             <Media url="https://ipfs.io/ipfs/QmcNtgAdi9fnHWHQa5QxWLFtRYNuyiHCe8VJyYXxLm55HX" />
-          <span style={{padding:'5px'}}>i'm in the process of refining the css</span>
+            <Media url="https://ipfs.io/ipfs/QmZLGyUfssNR4xmkLS2oYA1h9HwpUbCPSbLKZVq97xftZ5" />
+          </div>
+          <span style={{padding:'15px'}}>i'm in the process of refining the css</span>
         </div>
         <div className={`p1p-wrap-${theme.toString().toLowerCase()}`}>
           <p>Page One needs some style</p>
