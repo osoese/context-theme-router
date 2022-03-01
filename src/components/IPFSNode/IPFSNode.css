@@ -1,0 +1,10 @@
+.nodeWrapper {
+  padding: 10px;
+  margin: 5px;
+  border:0.5px solid #CCCCCC;
+}
+
+.nodeWrapper h3 {
+  padding: 0px;
+  margin: 0px;
+}

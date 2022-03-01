@@ -1,0 +1,16 @@
+.head-container {
+  background-color: rgba(124, 102, 99, 0.6);
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 2px solid #CCCCCC;
+  border-radius: 15px;
+}
+
+.head-container h3 {
+  margin: 0px;
+  color: #9A155B;
+}
+
+.head-container div {
+  padding: 5px;
+}
