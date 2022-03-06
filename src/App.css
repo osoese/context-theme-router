@@ -52,6 +52,11 @@ ul li:hover {
   background-color: orange;
 }
 
+.ul-li-dark-active {
+  padding: 3px;
+  background-color: orange;
+}
+
 .App {
   overflow-wrap: break-word;
 }
