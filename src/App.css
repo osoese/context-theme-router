@@ -185,6 +185,7 @@ nav:hover {
   display: flex;
   flex-direction: row;
   border: 1px solid orange;
+  margin:20px;
 }
 
 .not-wrapped {
@@ -194,6 +195,8 @@ nav:hover {
 .header-route-container {
   font-size: 80%;
   overflow: hidden;
+  margin: 20px;
+  border: 1px solid blue;
 }
 
 .header-nav-column {
