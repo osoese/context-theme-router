@@ -193,7 +193,7 @@ nav:hover {
 
 .header-route-container {
   font-size: 80%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .header-nav-column {
