@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import './Head.css';
 import { useTheme, Theme } from '../../ThemeContext';
@@ -26,8 +26,8 @@ const Head = (props:any) => {
 
       <div>
         in the head component using react router v6, and
-        want to see path history. <code>yarn add history</code> and then
-        this is what is in <code>history.location.pathname</code> {history.location.pathname}
+        want to see path history. <code className={theme.toString().toLowerCase()}>yarn add history</code> and then
+        this is what is in <code className={theme.toString().toLowerCase()}>history.location.pathname</code> {history.location.pathname}
         while the inline routes are just manually loading route into a state var
       </div>
 
@@ -36,7 +36,7 @@ const Head = (props:any) => {
           /** inline route **/
           <div onClick={()=>{
             setRouteTrack('/');
-            console.log(routeTrack);
+            console.log(`routeTrack ${routeTrack}`);
           }}>this is an inline route /</div>
         } />
 
@@ -46,7 +46,7 @@ const Head = (props:any) => {
           <div
             onClick={()=>{
               setRouteTrack('/play');
-              console.log(routeTrack);
+              console.log(`routeTrack ${routeTrack}`);
             }}>this is an inline route /play {props.routeTrack}</div>
         } />
 
@@ -56,7 +56,7 @@ const Head = (props:any) => {
           <div
           onClick={(e)=>{
             setRouteTrack('/about');
-            console.log(routeTrack, e);
+            console.log(`routeTrack ${routeTrack}`);
           }}>this is an inline route /about {props.routeTrack}</div>
         } />
 
@@ -65,7 +65,7 @@ const Head = (props:any) => {
           <div
           onClick={(e)=>{
             setRouteTrack('/ui-kit');
-            console.log(routeTrack, e);
+            console.log(`routeTrack ${routeTrack}`);
           }}>this is an inline route ui-kit</div>
         } />
 

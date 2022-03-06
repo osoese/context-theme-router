@@ -1,10 +1,23 @@
 .nodeWrapper {
-  padding: 10px;
+  padding-top: 5px;
   margin: 5px;
-  border:0.5px solid #CCCCCC;
+  margin-bottom: 0px;
+  border-top:0.5px solid #CCCCCC;
+  border-left:0.5px solid #CCCCCC;
+  border-right:0.5px solid #CCCCCC;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width:300px;
+  background-color: rgba(92, 133, 214, 1)
 }
 
 .nodeWrapper h3 {
   padding: 0px;
   margin: 0px;
+}
+
+.nodeWrapper p {
+  padding: 0px;
+  margin: 0px;
+  font-size: 2rem;
 }

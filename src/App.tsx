@@ -20,42 +20,80 @@ function App() {
   const [myNode, setMyNode] = React.useState({});
   return (
     <>
-    <IPFSNode myNode={myNode} setMyNode={setMyNode} />
     <ThemeContext.Provider value={{ theme, setTheme }}>
+    <IPFSNode myNode={myNode} setMyNode={setMyNode} />
       {/*** <RouteTrackContext.Provider value{{ routeTrack, setRouteTrack }}> ***/}
       <div className="App">
-        <header className={`App-header-${theme.toString().toLowerCase()}`}>
+        <header className={`App-header App-header-${theme.toString().toLowerCase()}`}>
           <>
-            <div className="header-route-container">
-              <nav>
-                <Mode />
-                <NavLink
-                  className={({ isActive }) => (isActive ? `Nav-${theme.toString().toLowerCase()}-active` : `Nav-${theme.toString().toLowerCase()}`)}
-                  to="/">Home</NavLink>
-                <NavLink
-                  className={({ isActive }) => (isActive ? `Nav-${theme.toString().toLowerCase()}-active` : `Nav-${theme.toString().toLowerCase()}`)}
-                  to="/about">About</NavLink>
-                <NavLink
-                  className={({ isActive }) => (isActive ? `Nav-${theme.toString().toLowerCase()}-active` : `Nav-${theme.toString().toLowerCase()}`)}
-                  to="/play">Play</NavLink>
-                <NavLink
-                  className={({ isActive }) => (isActive ? `Nav-${theme.toString().toLowerCase()}-active` : `Nav-${theme.toString().toLowerCase()}`)}
-                  to="/ui-kit">UiKit</NavLink>
-              </nav>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="about" element={<About />} />
-                <Route path="play" element={<Play />} />
-                <Route path="ui-kit" element={<UiKit />} />
-              </Routes>
+            <div className="header-fiex-wrapper">
+              <div className="header-nav-column">
+                <div className="header-route-container">
+                  <nav>
+                    <Mode />
+                    <NavLink
+                      className={({ isActive }) => (isActive ? `Nav-${theme.toString().toLowerCase()}-active` : `Nav-${theme.toString().toLowerCase()}`)}
+                      to="/">Home</NavLink>
+                    <NavLink
+                      className={({ isActive }) => (isActive ? `Nav-${theme.toString().toLowerCase()}-active` : `Nav-${theme.toString().toLowerCase()}`)}
+                      to="/about">About</NavLink>
+                    <NavLink
+                      className={({ isActive }) => (isActive ? `Nav-${theme.toString().toLowerCase()}-active` : `Nav-${theme.toString().toLowerCase()}`)}
+                      to="/play">Play</NavLink>
+                    <NavLink
+                      className={({ isActive }) => (isActive ? `Nav-${theme.toString().toLowerCase()}-active` : `Nav-${theme.toString().toLowerCase()}`)}
+                      to="/ui-kit">UiKit</NavLink>
+                  </nav>
+                </div>
+                <div style={{display:'flex',flexDirection:'row'}}>
+                  <ul className="header-left-nav">
+                    <li className="home not-wrapped">
+                      <NavLink
+                        className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
+                        to="/">home</NavLink>
+                    </li>
+                    <li className="about not-wrapped">
+                      <NavLink
+                        className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
+                        to="/about">about</NavLink>
+                    </li>
+                    <li className="play not-wrapped">
+                      <NavLink
+                        className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
+                        to="/play">play</NavLink>
+                    </li>
+                    <li className="ui-kit not-wrapped">
+                      <NavLink
+                        className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
+                        to="/ui-kit">UiKit</NavLink>
+                    </li>
+                    <li className="rocket not-wrapped">
+                      <NavLink
+                        className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
+                        to="/about">about</NavLink>
+                    </li>
+                  </ul>
+                  <div className="header-page-wrapper">
+                    <div>
+                      <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="about" element={<About />} />
+                        <Route path="play" element={<Play />} />
+                        <Route path="ui-kit" element={<UiKit />} />
+                      </Routes>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </>
-          <>
             <div className="header-page-container">
               {/** will probably re-locate to a component **/}
               <Head routeTrack={routeTrack} setRouteTrack={setRouteTrack} />
               <PageOne />
             </div>
+          </>
+          <>
+
           </>
         </header>
         <div className={`App-body-${theme.toString().toLowerCase()}`}>
