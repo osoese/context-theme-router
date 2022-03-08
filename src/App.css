@@ -2,59 +2,41 @@ ul {
     list-style: none;
     padding: 0px;
     margin-top: 0px;
-    width:70px;
-    --background-color: rgba(29, 161, 247, 0.65);
-    border-right: 0.3px solid rgba(111,111,111,0.4);
-    border-left: 0.3px solid rgba(111,111,111,0.4);
+    width:100%;
+    --border-right: 0.3px solid rgba(111,111,111,0.4);
+    border-left: 4px solid rgba(111,111,111,0.4);
 }
 
 ul:hover {
+  width:100%;
   background-color: rgba(29, 161, 247, 0.65);
 }
 
-ul li.home:before {
-    content: '🏠';
-}
-
-ul li.about:before {
-    content: '⚛';
-}
-
-
-ul li.play:before {
-    content: '⚡';
-}
-
-ul li.ui-kit:before {
-    content: '♒';
-}
-
-ul li.rocket:before {
-    content: '🚀';
-}
-
 ul li {
-  width: 70px;
-  border-right: 4px solid rgba(111,111,111,0.4);
-  border-left: 0.5px solid rgba(111,111,111,0.4);
+  width: 80px;
+  padding:10px;
+  border-right: 0.5px solid rgba(111,111,111,0.4);
+  border-left: 4px solid rgba(111,111,111,0.4);
 }
 
 ul li:hover {
-  width: 70px;
+  width: 80px;
   cursor: pointer;
   background-color: rgba(145, 29, 247, 0.25);
-  border-right: 4px solid green;
-  border-left: 0.5px solid green;
+  border-right: 0.5px solid green;
+  border-left: 4px solid green;
 }
 
 .ul-li-light-active {
-  padding: 3px;
-  background-color: orange;
+  width: 80px;
+  margin-left: -4px;
+  border-left: 4px solid purple;
 }
 
 .ul-li-dark-active {
-  padding: 3px;
-  background-color: orange;
+  width: 80px;
+  margin-left: -4px;
+  border-left: 4px solid purple;
 }
 
 .App {
@@ -78,6 +60,7 @@ ul li:hover {
 
 .App-header-light {
   border-left:0.5px solid #CCCCCC;
+  border-radius: 20px;
   background-color: #CCCCCC;
   margin-left: 5px;
   display: flex;
@@ -88,6 +71,7 @@ ul li:hover {
 
 .App-header-dark {
   border-left:0.5px solid #CCCCCC;
+  border-radius: 20px;
   background-color: #86463F;
   margin-left: 5px;
   display: flex;
@@ -158,33 +142,28 @@ nav:hover {
 }
 
 .header-page-wrapper {
-  padding:6%;
-  border: 1px solid #CCFCCC;
+  padding-left:3%;
+  padding-right:3%;
   contain:content;
   margin-top: 0px;
-  border-bottom-right-radius: 25px;
 }
 
 
 .header-page-container {
-  background-color: orange;
-  border: 1px solid orange;
-  border-radius: 20px;
   padding: 0.5%;
   margin: 1%;
 }
 
 .page-wrapper {
-  border: 1px solid blue;
-  border-radius: 15px;
-  padding: 20px;
-  margin:20px;
+
 }
 
 .header-fiex-wrapper {
+  background-color: rgba(29, 161, 247, 0.65);
+  border: 1px dashed blue;
+  border-radius: 20px;
   display: flex;
   flex-direction: row;
-  border: 1px solid orange;
 }
 
 .not-wrapped {
@@ -202,7 +181,6 @@ nav:hover {
   overflow:visible;
   height:400px;
   width:100%;
-  border: 1px solid black;
 }
 
 .Body-wrap {

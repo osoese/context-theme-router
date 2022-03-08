@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import './IPFSNode.css'
 
 declare global {
@@ -13,23 +13,27 @@ const IPFSNode = (props:any) => {
   //console.log('CID created via ipfs.add:', cid)
   //const data = await node.cat(cid)
   //console.log('Data read back via ipfs.cat:', new TextDecoder().decode(data))
-  if (window && window.Ipfs) {
-    window.Ipfs.create({
-      repo: String(Math.random() + Date.now()),
-      init: { algorithm: 'Ed25519' }
-    }).then( async (node:any) => {
-      await props.setMyNode(node);
-      const results = await props.myNode.add('=^.^= meow meow')
-      setNodeSet(true)
-      console.log({ myNode:props.myNode, results })
-    }).catch(async (e:any) => {
-      console.log({ e })
-      if(nodeSet){
-      const results = await props.myNode.add('=^.^= meow meow')
-      console.log({ myNode: props.myNode, results })
-      }
-    });
-  }
+
+  useEffect(()=> {
+    if (window?.Ipfs && !nodeSet) {
+      window.Ipfs.create({
+        repo: String(Math.random() + Date.now()),
+        init: { algorithm: 'Ed25519' }
+      }).then( async (node:any) => {
+        await props.setMyNode(node);
+        const results = await props.myNode.add('=^.^= meow meow')
+        setNodeSet(true)
+        console.log({ myNode:props.myNode })
+      }).catch(async (e:any) => {
+        console.log({ e })
+        if(nodeSet){
+        const results = await props.myNode.add('=^.^= meow meow')
+        console.log({ myNode: props.myNode, results })
+        }
+      });
+    }
+  })
+
 
   return (
     <>
