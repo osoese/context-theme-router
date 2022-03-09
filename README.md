@@ -9,15 +9,22 @@ using an IPNS link to the content. I am not sure how to properly pin ipns conten
 my node offline and it persists. I do know I can pin this type of static content on the
 latest ipfs hash so here is the latest build version:
 
-`QmVG42eBEw2FQjtZrvWE72g2BPZ8iDq8Lwda8ggJ6pUHc1` (https://ipfs.io/ipfs/QmVG42eBEw2FQjtZrvWE72g2BPZ8iDq8Lwda8ggJ6pUHc1)
+`QmRa6ygYQYe4doqLy9jAQiuLiUUH7VLx4ftwVaWX5rkngp` (https://ipfs.io/ipfs/QmRa6ygYQYe4doqLy9jAQiuLiUUH7VLx4ftwVaWX5rkngp)
 
 this is compiled using the latest push to the `add-components` branch
 
-# you can ignore some of the stuff below and just use yarn build yarn start
+# Inter Planetary File System (IPFS) CI / CD deployments
+
+Currently I am manually running a desktop ipfs node and I right click the build folder and add ti IPFS, then
+in the console I am adding the CID by using the command `ipfs name publish`  to get the build open at the
+IPNS link associated to my node key. I am also, now running an IPFS node in the browser as part of the build.
+We will be working to use that ipfs node more and more now that it is up and running.
+
+# you can ignore some of the stuff below and just use `yarn build` and  `yarn start`
 
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was [ originally ] bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
