@@ -22,3 +22,8 @@
   margin: 0px;
   font-size: 2rem;
 }
+
+.yes {
+  color: green;
+  font-size: 1.7rem;
+}

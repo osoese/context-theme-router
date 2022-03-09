@@ -1,12 +1,13 @@
 import './About.css';
 import Mode from '../Mode/Mode';
+import { useTheme, Theme } from '../../ThemeContext';
 
 export default function About() {
-
+  const { theme, setTheme } = useTheme();
   return (
     <>
       <main>
-        <h2>About: Functional Design</h2>
+        <h3 className={`h3 h3-${theme.toString().toLowerCase()}`}>About: Functional Design</h3>
         <p>
           You can set dark and light mode icon and verify state is changed.
           If you refresh the page you can verify that local storage is being used to persist.

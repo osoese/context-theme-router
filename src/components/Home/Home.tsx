@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <main className="page-main">
-        <h3>Functional [web3] Design in React on IPFS</h3>
+        <h3 className={`h3 h3-${theme.toString().toLowerCase()}`}>Functional [web3] Design in React on IPFS</h3>
         <p>refresh page and state remains (TODO: add a state reset to clear local storage)</p>
         <p>
           Perhaps a CI/CD to IPFS deployment; at the momment I am working on

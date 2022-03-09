@@ -34,14 +34,14 @@ const IPFSNode = (props:any) => {
     }
   })
 
-
   return (
     <>
       <main>
         <div className="nodeWrapper">
           <p>
-            <span style={{fontSize:'16px',fontWeight:'bold'}}>IPFS Node</span>
-            <span style={{color:'blue',fontWeight:'bold'}}>online:</span> {(props.myNode.isOnline)?'yes':'no'}
+            <span style={{fontSize:'1.7rem',fontWeight:'bold'}}>IPFS Node</span>
+            <span style={{fontSize:'1.7rem',color:'blue',fontWeight:'bold'}}>online:</span>
+            <span className={`${(props.myNode.isOnline)?'yes':'no'}`}>{(props.myNode.isOnline)?'yes':'no'}</span>
           </p>
         </div>
       </main>
