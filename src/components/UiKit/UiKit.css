@@ -1,0 +1,13 @@
+.ul-row {
+  display: flex;
+  flex-direction: row;
+  --border:1px solid red;
+}
+
+.uiKit-media-wrap {
+  transform: scale(0.17);
+  position: relative;
+  top: -20px;
+  left: -100px;
+  max-height: 70px;
+}

@@ -90,7 +90,7 @@ function App() {
               {/** will probably re-locate to a component **/}
               <Head routeTrack={routeTrack} setRouteTrack={setRouteTrack} />
             </div>
-            <div>
+            <div style={{minHeight:'200px'}}>
               <PageOne />
             </div>
           </>
