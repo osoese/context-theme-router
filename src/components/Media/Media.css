@@ -13,7 +13,8 @@
 }
 
 .video-media {
-  max-width:400px;
+  max-width:300px;
   height:auto;
-  max-height:400px;
+  max-height:300px;
+  min-width: 300px;
 }

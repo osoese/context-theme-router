@@ -46,7 +46,7 @@ function App() {
                 <div style={{display:'flex',flexDirection:'row'}}>
                   <div>
                     <ul className="header-left-nav">
-                      <li className="home not-wrapped">
+                      <li className={`home not-wrapped`}>
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
                           to="/">🏠 home</NavLink>
