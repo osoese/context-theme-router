@@ -1,5 +1,5 @@
 .media-viewer {
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #CCCCCC;
   border-radius:25px;
   margin: 10px;
@@ -17,4 +17,20 @@
   height:auto;
   max-height:300px;
   min-width: 300px;
+}
+
+.html-media {
+  max-width:350px;
+  height:auto;
+  max-height:400px;
+  min-width: 300px;
+  min-height: 350px;
+}
+
+.json-media {
+  max-width:350px;
+  height:auto;
+  max-height:400px;
+  min-width: 300px;
+  min-height: 350px;
 }

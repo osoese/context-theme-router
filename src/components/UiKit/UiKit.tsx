@@ -38,6 +38,20 @@ export default function UiKit() {
             <div className="ul-row">
               <li>
                 <div className="divRow">
+                  <div>IPFS Media</div>
+                  <div className="uiKit-media-wrap">
+                    <Media url="https://ipfs.io/ipfs/QmXm4MSrS2mWznkRTe5GKhwHcH7HzNuszrEXJYTo1tD3gk" />
+                  </div>
+                  <div className="uiKit-media-wrap">
+                    <Media url="https://ipfs.io/ipfs/QmPrewaM8pGH8GjjMGHRpwz2TMuVUEwA1254pi5nQ2HgVP" />
+                  </div>
+                </div>
+              </li>
+
+            </div>
+            <div className="ul-row">
+              <li>
+                <div className="divRow">
                   <div style={{minWidth:'100%'}}>Mode Toggle</div>
                   <div style={{border:'1px dashed green',padding:'20px',margin:'10px'}}>can I put the component here?</div>
                   <div className="uiKit-media-wrap">
