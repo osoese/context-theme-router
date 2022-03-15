@@ -19,29 +19,32 @@ export default function Media(props:any) {
   const [content, setContent] = useState(defaultImage);
   const [contentType, setContentType] = useState('none')
 
-//   useEffect(() => {
-//     const isBlob = (response) => {
-//         ["image", "video", "html"].forEach(mediaType => {
-//             if (response.blob.includes(mediaType)) {
-//                 return mediaType;
-//             }
-//         })
-//         return false
-//     }
-//     if (isLoading === true) {
-//         const res = fetch(props.url);
-//         const isResponseBlob = isBlob(res);
-//         if (isResponseBlob) {
-//             let url = URL.createObjectURL(res.blob);
-//             setContentType(isResponseBlob);
-//             setContent(url);
-//         } else {
-//             setContentType('json');
-//             setContent(JSON.parse(JSON.stringify(res.text())));
-//         }
-//         setIsLoading(false);
-//     }
-// })
+  // useEffect(() => {
+  //     const isBlob = (response) => {
+  //         ["image", "video", "html"].forEach(mediaType => {
+  //             if (response.blob.includes(mediaType)) {
+  //                 return mediaType;
+  //             }
+  //         })
+  //         return false
+  //     }
+  //     const runFunction = async () => {
+  //         const res = await fetch(props.url);
+  //         const isResponseBlob = isBlob(res);
+  //         if (isResponseBlob) {
+  //             let url = URL.createObjectURL(res.blob);
+  //             setContentType(isResponseBlob);
+  //             setContent(url);
+  //         } else {
+  //             setContentType('json');
+  //             setContent(JSON.parse(JSON.stringify(res.text())));
+  //         }
+  //         setIsLoading(false);
+  //     }
+  //     if (isLoading === true) {
+  //         runFunction()
+  //     }
+  // }, [isLoading])
 
   useEffect(() => {
     if(isLoading === true){
