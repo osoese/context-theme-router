@@ -1,13 +1,13 @@
 .ul-row {
   display: flex;
   flex-direction: row;
-  --border:1px solid red;
   -webkit-transition:0.3s all;
 	-moz-transition:0.3s all;
 }
 
 .uiKit-media-wrap {
   border: 1px dashed red;
+  padding:20px;
   max-width:500px;
   max-height: 500px;
   --top: 20px;
