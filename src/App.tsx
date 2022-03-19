@@ -15,6 +15,7 @@ import Head from './components/Head/Head';
 function App() {
   const [theme, setTheme] = useLocalStorage("storeTheme",Theme.Light);
   const [routeTrack, setRouteTrack] = useLocalStorage("storeRouteTrack",'/');
+  const [navVisible, setNavVisible] = useLocalStorage("visibleNav","visible");
   const [myNode, setMyNode] = React.useState({});
   return (
     <>
@@ -25,9 +26,14 @@ function App() {
         <header className={`App-header App-header-${theme.toString().toLowerCase()}`}>
           <>
             <div className="header-fiex-wrapper">
-              <div className="header-nav-column">
+              <div className={`header-nav-column ${navVisible}`}>
                 <div className="header-route-container">
                   <nav>
+                    <input
+                      style={{marginTop:'12px',fontSize:'1.5rem'}}
+                      type="checkbox"
+                      checked={(navVisible==='visible')?true:false}
+                      onClick={()=>{(navVisible==='visible')?setNavVisible('invisible'):setNavVisible('visible')}} />
                     <Mode />
                     <NavLink
                       className={({ isActive }) => (isActive ? `Nav-${theme.toString().toLowerCase()}-active` : `Nav-${theme.toString().toLowerCase()}`)}
@@ -49,27 +55,41 @@ function App() {
                       <li className={`home not-wrapped`}>
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
-                          to="/">🏠 home</NavLink>
+                          to="/">
+                            <span>🏠</span>
+                            <span className={`nav-text-extension ${navVisible}`}>home</span></NavLink>
                       </li>
                       <li className="about not-wrapped">
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
-                          to="/about">⚛ about</NavLink>
+                          to="/about">
+                          <span>⚛</span>
+                          <span className={`nav-text-extension ${navVisible}`}>about</span>
+                        </NavLink>
                       </li>
                       <li className="play not-wrapped">
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
-                          to="/play">⚡ play</NavLink>
+                          to="/play">
+                          <span>⚡</span>
+                          <span className={`nav-text-extension ${navVisible}`}>play</span>
+                        </NavLink>
                       </li>
                       <li className="ui-kit not-wrapped">
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
-                          to="/ui-kit">♒ UiKit</NavLink>
+                          to="/ui-kit">
+                          <span>♒</span>
+                          <span className={`nav-text-extension ${navVisible}`}>UiKit</span>
+                        </NavLink>
                       </li>
                       <li className="rocket not-wrapped">
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
-                          to="/about">🚀 about</NavLink>
+                          to="/about">
+                            <span>🚀</span>
+                            <span className={`nav-text-extension ${navVisible}`}>about</span>
+                          </NavLink>
                       </li>
                     </ul>
                   </div>

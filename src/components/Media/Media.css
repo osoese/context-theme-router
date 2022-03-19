@@ -3,6 +3,7 @@
   border: 1px solid #CCCCCC;
   border-radius:25px;
   margin: 10px;
+  min-width: 300px;
 }
 
 .image-media {
