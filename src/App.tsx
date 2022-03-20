@@ -9,6 +9,7 @@ import PageOne from './pages/PageOne/PageOne';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Play from './components/Play/Play';
+import CiCd from './components/CiCd/CiCd';
 import UiKit from './components/UiKit/UiKit';
 import Head from './components/Head/Head';
 
@@ -46,6 +47,9 @@ function App() {
                       to="/play">Play</NavLink>
                     <NavLink
                       className={({ isActive }) => (isActive ? `Nav-${theme.toString().toLowerCase()}-active` : `Nav-${theme.toString().toLowerCase()}`)}
+                      to="/cicd">CiCd</NavLink>
+                    <NavLink
+                      className={({ isActive }) => (isActive ? `Nav-${theme.toString().toLowerCase()}-active` : `Nav-${theme.toString().toLowerCase()}`)}
                       to="/ui-kit">UiKit</NavLink>
                   </nav>
                 </div>
@@ -76,6 +80,14 @@ function App() {
                           <div className={`nav-text-extension ${navVisible}`}>play</div>
                         </NavLink>
                       </li>
+                      <li className="cicd not-wrapped">
+                        <NavLink
+                          className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}
+                          to="/cicd">
+                          <div>⚡</div>
+                          <div className={`nav-text-extension ${navVisible}`}>cicd</div>
+                        </NavLink>
+                      </li>
                       <li className="ui-kit not-wrapped">
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}
@@ -100,6 +112,7 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="about" element={<About />} />
                         <Route path="play" element={<Play />} />
+                        <Route path="cicd" element={<CiCd />} />
                         <Route path="ui-kit" element={<UiKit />} />
                       </Routes>
                     </div>
