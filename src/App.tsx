@@ -54,47 +54,48 @@ function App() {
                     <ul className="header-left-nav">
                       <li className={`home not-wrapped`}>
                         <NavLink
-                          className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
+                          className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}
                           to="/">
-                            <span>🏠</span>
-                            <span className={`nav-text-extension ${navVisible}`}>home</span></NavLink>
+                            <div>🏠</div>
+                            <div className={`nav-text-extension ${navVisible}`}>home</div>
+                        </NavLink>
                       </li>
                       <li className="about not-wrapped">
                         <NavLink
-                          className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
+                          className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}
                           to="/about">
-                          <span>⚛</span>
-                          <span className={`nav-text-extension ${navVisible}`}>about</span>
+                          <div>⚛</div>
+                          <div className={`nav-text-extension ${navVisible}`}>about</div>
                         </NavLink>
                       </li>
                       <li className="play not-wrapped">
                         <NavLink
-                          className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
+                          className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}
                           to="/play">
-                          <span>⚡</span>
-                          <span className={`nav-text-extension ${navVisible}`}>play</span>
+                          <div>⚡</div>
+                          <div className={`nav-text-extension ${navVisible}`}>play</div>
                         </NavLink>
                       </li>
                       <li className="ui-kit not-wrapped">
                         <NavLink
-                          className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
+                          className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}
                           to="/ui-kit">
-                          <span>♒</span>
-                          <span className={`nav-text-extension ${navVisible}`}>UiKit</span>
+                          <div>♒</div>
+                          <div className={`nav-text-extension ${navVisible}`}>UiKit</div>
                         </NavLink>
                       </li>
                       <li className="rocket not-wrapped">
                         <NavLink
-                          className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : ``)}
+                          className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}
                           to="/about">
-                            <span>🚀</span>
-                            <span className={`nav-text-extension ${navVisible}`}>about</span>
+                            <div>🚀</div>
+                            <div className={`nav-text-extension ${navVisible}`}>about</div>
                           </NavLink>
                       </li>
                     </ul>
                   </div>
                   <div className="header-page-wrapper">
-                    <div>
+                    <div style={{marginLeft:'0px'}}>
                       <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="about" element={<About />} />

@@ -18,49 +18,41 @@ export default function UiKit() {
           <span>
             ...and tinkering with css, animations, svg and javascript for re-use
           </span>
-          <ul style={{margin:'10px'}}>
-            <div className="ul-row">
-              <li>
-                <div className="divRow">
-                  <div className="liHeader">IPFS Media</div>
-                  <div className="uiKit-media-wrap">
-                    <Media url="https://ipfs.io/ipfs/QmWJ3HnbLKm3WM2rkjugbUJ1tNj5iWLb8ZbUJUw5GkhWmJ" />
-                  </div>
-                  <div className="uiKit-media-wrap">
-                    <Media url="https://ipfs.io/ipfs/QmZLGyUfssNR4xmkLS2oYA1h9HwpUbCPSbLKZVq97xftZ5" />
-                  </div>
+          <ul>
+            <li>
+              <div className="divRow">
+                <div className="liHeader">IPFS Media</div>
+                <div className="uiKit-media-wrap">
+                  <Media url="https://ipfs.io/ipfs/QmWJ3HnbLKm3WM2rkjugbUJ1tNj5iWLb8ZbUJUw5GkhWmJ" />
                 </div>
-              </li>
-
-            </div>
-            <div className="ul-row">
-              <li>
-                <div className="divRow">
-                  <div className="liHeader">IPFS Media</div>
-                  <div className="uiKit-media-wrap">
-                    <Media url="https://ipfs.io/ipfs/QmXm4MSrS2mWznkRTe5GKhwHcH7HzNuszrEXJYTo1tD3gk" />
-                  </div>
-                  <div className="uiKit-media-wrap">
-                    <Media url="https://ipfs.io/ipfs/QmPrewaM8pGH8GjjMGHRpwz2TMuVUEwA1254pi5nQ2HgVP" />
-                  </div>
+                <div className="uiKit-media-wrap">
+                  <Media url="https://ipfs.io/ipfs/QmZLGyUfssNR4xmkLS2oYA1h9HwpUbCPSbLKZVq97xftZ5" />
                 </div>
-              </li>
-
-            </div>
-            <div className="ul-row">
-              <li>
-                <div className="divRow">
-                  <div className="liHeader">Mode Toggle</div>
-                  <div style={{border:'1px dashed green',padding:'20px',margin:'10px'}}>can I put the component here?</div>
-                  <div className="uiKit-media-wrap">
-                    <Mode />
-                  </div>
-                  <div className="uiKit-media-wrap">
-                    <Mode />
-                  </div>
+              </div>
+            </li>
+            <li>
+              <div className="divRow">
+                <div className="liHeader">IPFS Media</div>
+                <div className="uiKit-media-wrap">
+                  <Media url="https://ipfs.io/ipfs/QmXm4MSrS2mWznkRTe5GKhwHcH7HzNuszrEXJYTo1tD3gk" />
                 </div>
-              </li>
-            </div>
+                <div className="uiKit-media-wrap">
+                  <Media url="https://ipfs.io/ipfs/QmPrewaM8pGH8GjjMGHRpwz2TMuVUEwA1254pi5nQ2HgVP" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="divRow">
+                <div className="liHeader">Mode Toggle</div>
+                <div style={{border:'1px dashed green',padding:'20px',margin:'10px'}}>can I put the component here?</div>
+                <div className="uiKit-media-wrap">
+                  <Mode />
+                </div>
+                <div className="uiKit-media-wrap">
+                  <Mode />
+                </div>
+              </div>
+            </li>
             <li>another one</li>
             <li>another one</li>
             <li>another one</li>

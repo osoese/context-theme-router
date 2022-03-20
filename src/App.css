@@ -1,41 +1,82 @@
 ul {
     list-style: none;
-    padding: 0px;
+    padding: 2px;
+    margin-left: 0px;
+    --margin-left: -40px;
+    margin-right: 25px;
     margin-top: 0px;
-    width:100%;
     --border-right: 0.3px solid rgba(111,111,111,0.4);
     --border-left: 4px solid rgba(111,111,111,0.4);
+    display:table;
+    width:60%;
+
 }
 
 ul:hover {
-  width:100%;
   background-color: rgba(29, 161, 247, 0.65);
+  --border-right: 0.5px solid green;
+  --border-left: 4px solid green;
 }
 
 ul li {
   padding:10px;
-  max-height: 300px;
+  max-height: 320px;
+  margin-right:20px;
   border-right: 0.5px solid rgba(111,111,111,0.4);
   border-left: 4px solid rgba(111,111,111,0.4);
+  display:table-row;
 }
 
 ul li:hover {
   cursor: pointer;
+  padding:10px;
+  max-height: 320px;
   background-color: rgba(145, 29, 247, 0.25);
+  box-shadow: 15px -1px 20px -2px #888;
+}
+
+.ul-li-light {
+  display: flex;
+  flex-direction: row;
+  margin-left: -4px;
+  border-right: 0.3px solid rgba(111,111,111,0.4);
+  border-left: 4px solid rgba(111,111,111,0.4);
+  --background-color: orange;
+}
+
+.ul-li-light:hover {
+  margin-left: -4px;
   border-right: 0.5px solid green;
   border-left: 4px solid green;
 }
 
 .ul-li-light-active {
+  display: flex;
+  flex-direction: row;
+  max-height: 320px;
   margin-left: -4px;
   border-left: 4px solid purple;
-  border-right: 0.5px solid purple
+  border-right: 0.5px solid purple;
+}
+
+.ul-li-dark {
+  display: flex;
+  flex-direction: row;
+  margin-left: -4px;
 }
 
 .ul-li-dark-active {
+  display: flex;
+  flex-direction: row;
+  max-height: 320px;
   margin-left: -4px;
   border-left: 4px solid purple;
-  border-right: 0.5px solid purple
+  border-right: 0.5px solid purple;
+}
+
+ul.header-left-nav {
+  --width:120%;
+  --background-color: orange;
 }
 
 .App {
@@ -81,7 +122,7 @@ ul li:hover {
 nav {
   border-top: 0.3px solid rgba(111,111,111,0.4);
   display: inline-flex;
-  gap: 8px;
+  gap: 7px;
   border-bottom: 0.3px solid rgba(111,111,111,0.4);
   border-left: 0.3px solid rgba(111,111,111,0.6);
   padding-left: 7px;
@@ -175,6 +216,7 @@ nav:hover {
 
 .not-wrapped {
   white-space: nowrap;
+  margin-left: 0px;
 }
 
 .header-route-container {

@@ -9,7 +9,7 @@ using an IPNS link to the content. I am not sure how to properly pin ipns conten
 my node offline and it persists. I do know I can pin this type of static content on the
 latest ipfs hash so here is the latest build version:
 
-`QmVzm7eeEQ1e58orhFzRa2ijYswsRxNcF8XSYY1AyNAtdH` (https://ipfs.io/ipfs/QmVzm7eeEQ1e58orhFzRa2ijYswsRxNcF8XSYY1AyNAtdH)
+`QmNXqX6VQbLMgqTJ8vacttntjFPPJYUyEtzd5fhe532uWb` (https://ipfs.io/ipfs/QmNXqX6VQbLMgqTJ8vacttntjFPPJYUyEtzd5fhe532uWb)
 
 this is compiled using the latest push to the `add-components` branch
 

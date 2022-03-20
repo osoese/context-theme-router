@@ -3,11 +3,6 @@ main {
   --border: 1px solid green;
 }
 
-.ul-row {
-  display: flex;
-  flex-direction: row;
-}
-
 .uiKit-media-wrap {
   border: 1px dashed red;
   border-radius: 25px;
@@ -18,9 +13,10 @@ main {
 .liHeader {
   min-width:120px;
   padding:10px;
+  margin-left: 20px;
 }
 
 .divRow {
   transform: scale(0.65);
-  transform-origin: top center;
+  transform-origin: left center;
 }
