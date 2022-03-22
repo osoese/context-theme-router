@@ -76,7 +76,7 @@ function App() {
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}
                           to="/play">
-                          <div>⚡</div>
+                          <div>▶</div>
                           <div className={`nav-text-extension ${navVisible}`}>play</div>
                         </NavLink>
                       </li>

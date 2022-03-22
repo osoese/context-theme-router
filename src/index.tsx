@@ -5,6 +5,14 @@ import App from './App';
 import { HashRouter } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
+(function(){
+    var originallog = console.log;
+    console.log = function(txt) {
+        // Do really interesting stuff
+        originallog(`[log override] ${txt}`);
+    }
+})();
+
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter basename="/">

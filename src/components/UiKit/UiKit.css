@@ -13,7 +13,8 @@ main {
 .liHeader {
   min-width:120px;
   padding:10px;
-  margin-left: 20px;
+  max-height:2rem;
+  --margin-left: 20px;
 }
 
 .divRow {

@@ -2,11 +2,8 @@ ul {
     list-style: none;
     padding: 2px;
     margin-left: 0px;
-    --margin-left: -40px;
     margin-right: 25px;
     margin-top: 0px;
-    --border-right: 0.3px solid rgba(111,111,111,0.4);
-    --border-left: 4px solid rgba(111,111,111,0.4);
     display:table;
     width:60%;
 
@@ -31,8 +28,6 @@ ul li:hover {
   cursor: pointer;
   padding:10px;
   max-height: 320px;
-  background-color: rgba(145, 29, 247, 0.25);
-  box-shadow: 15px -1px 20px -2px #888;
 }
 
 .ul-li-light {
@@ -41,13 +36,14 @@ ul li:hover {
   margin-left: -4px;
   border-right: 0.3px solid rgba(111,111,111,0.4);
   border-left: 4px solid rgba(111,111,111,0.4);
-  --background-color: orange;
 }
 
 .ul-li-light:hover {
   margin-left: -4px;
   border-right: 0.5px solid green;
   border-left: 4px solid green;
+  background-color: rgba(42, 189, 34, 0.35);
+  box-shadow: 15px -1px 30px -2px #2abd22;
 }
 
 .ul-li-light-active {
@@ -63,6 +59,16 @@ ul li:hover {
   display: flex;
   flex-direction: row;
   margin-left: -4px;
+  border-right: 0.3px solid rgba(111,111,111,0.4);
+  border-left: 4px solid rgba(111,111,111,0.4);
+}
+
+.ul-li-dark:hover {
+  margin-left: -4px;
+  border-right: 0.5px solid green;
+  border-left: 4px solid green;
+  background-color: rgba(42, 189, 34, 0.35);
+  box-shadow: 15px -1px 30px -2px #2abd22;
 }
 
 .ul-li-dark-active {
@@ -143,9 +149,10 @@ nav:hover {
 }
 
 .Nav-light:hover {
-  background-color: rgba(145, 29, 247, 0.25);
+  background-color: rgba(42, 189, 34, 0.35);
   border-top: 4px solid rgba(86, 173, 64, 0.85);
-  border-bottom: 0.5px solid rgba(86, 173, 64, 0.85);;
+  border-bottom: 0.5px solid rgba(86, 173, 64, 0.85);
+  box-shadow: 5px 10px 65px -2px #2abd22;
 }
 
 .Nav-light-active {
@@ -163,9 +170,10 @@ nav:hover {
 }
 
 .Nav-dark:hover {
-  background-color: rgba(34, 134, 170, 0.35);
+  background-color: rgba(42, 189, 34, 0.35);
   border-top: 4px solid green;
   border-bottom: 0.5px solid green;
+  box-shadow: 5px 10px 65px -2px #2abd22;
 }
 
 .Nav-dark-active {
@@ -219,7 +227,7 @@ nav:hover {
 }
 
 .header-route-container {
-  font-size: 80%;
+  font-size: 1.2rem;
   overflow: visible;
 }
 

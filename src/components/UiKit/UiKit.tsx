@@ -2,6 +2,7 @@ import { useTheme, Theme } from '../../ThemeContext';
 import './UiKit.css';
 import Media from '../../components/Media/Media';
 import Mode from '../../components/Mode/Mode';
+import QRCode from 'react-qr-code';
 export default function UiKit() {
   const { theme, setTheme } = useTheme();
   return (
@@ -20,8 +21,8 @@ export default function UiKit() {
           </span>
           <ul>
             <li>
+              <div className="liHeader">IPFS Media</div>
               <div className="divRow">
-                <div className="liHeader">IPFS Media</div>
                 <div className="uiKit-media-wrap">
                   <Media url="https://ipfs.io/ipfs/QmWJ3HnbLKm3WM2rkjugbUJ1tNj5iWLb8ZbUJUw5GkhWmJ" />
                 </div>
@@ -31,19 +32,29 @@ export default function UiKit() {
               </div>
             </li>
             <li>
+              <div className="liHeader">IPFS Media</div>
               <div className="divRow">
-                <div className="liHeader">IPFS Media</div>
+
+                {/***}
                 <div className="uiKit-media-wrap">
                   <Media url="https://ipfs.io/ipfs/QmXm4MSrS2mWznkRTe5GKhwHcH7HzNuszrEXJYTo1tD3gk" />
                 </div>
+                ***/}
+
+
+                <div className="uiKit-media-wrap">
+                  <Media url="https://ipfs.io/ipfs/QmQJQ5TZQeVQzzjhSTjrJVPxomAdWGzS4gsrND4XTsyewy" />
+                </div>
+
+
                 <div className="uiKit-media-wrap">
                   <Media url="https://ipfs.io/ipfs/QmPrewaM8pGH8GjjMGHRpwz2TMuVUEwA1254pi5nQ2HgVP" />
                 </div>
               </div>
             </li>
             <li>
+              <div className="liHeader">Mode Toggle</div>
               <div className="divRow">
-                <div className="liHeader">Mode Toggle</div>
                 <div style={{border:'1px dashed green',padding:'20px',margin:'10px'}}>can I put the component here?</div>
                 <div className="uiKit-media-wrap">
                   <Mode />
@@ -53,7 +64,10 @@ export default function UiKit() {
                 </div>
               </div>
             </li>
-            <li>another one</li>
+            <li>
+              <div>ThirdParty React package component</div>
+              <div><QRCode value="hey" /></div>
+            </li>
             <li>another one</li>
             <li>another one</li>
             <li>video to qr code</li>

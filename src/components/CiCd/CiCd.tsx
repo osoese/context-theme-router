@@ -9,8 +9,8 @@ export default function CiCd() {
           Obviously everything on this site is WIP right now
         </p>
         <p>
-          Steps to produce a CI/CD pipelin on Ipfs and somehow will style this to have checkmarks as it progresses.
-          Will also be upgrading and refining the other components to this end as needed (i.e. the media component
+          Steps to produce a CI/CD pipeline; on Ipfs, and loosely defined WIP...
+          Will upgrade other components as needed (i.e. the media component
             will need to retrieve a docker image maybe)
           <ol>
             <li>Make a Page for CI/CD</li>
