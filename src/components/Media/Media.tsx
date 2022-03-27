@@ -18,7 +18,9 @@ export default function Media(props:any) {
   const [isLoading, setIsLoading] = useState(true)
   const [content, setContent] = useState(defaultImage);
   const [contentType, setContentType] = useState('none')
-
+  const height = props?.height || 400;
+  const width = props?.height || 400;
+  const scale = props?.scale || 80;
   // useEffect(() => {
   //     const isBlob = (response) => {
   //         ["image", "video", "html"].forEach(mediaType => {
@@ -83,8 +85,7 @@ export default function Media(props:any) {
 
   return (
         <>
-          <div className="media-viewer">
-            <div>
+
                 {(contentType === 'image')?
                   <img className="image-media" src={content} />
                   :
@@ -99,7 +100,9 @@ export default function Media(props:any) {
                       />
                     :
                       (contentType === 'html')?
-                      <iframe className="html-media" src={content} />
+                      <div className="iframe-container">
+                        <iframe className="html-media" src={content} />
+                      </div>
                       :
                         (contentType === 'json')?
                         <code>{content}</code>
@@ -107,8 +110,7 @@ export default function Media(props:any) {
                         <span>{content}</span>
                 }
                 <div>{contentType}</div>
-            </div>
-          </div>
+
         </>
   );
 }

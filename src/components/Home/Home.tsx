@@ -5,7 +5,6 @@ export default function Home() {
   const { theme, setTheme } = useTheme();
   return (
     <>
-      <main className="page-main">
         <h3 className={`h3 h3-${theme.toString().toLowerCase()}`}>Functional [web3] Design in React on IPFS</h3>
         <p>refresh page and state remains (TODO: add a state reset to clear local storage)</p>
         <p>
@@ -23,7 +22,6 @@ export default function Home() {
           based on user interaction with any number of blockchains. And, of course we
           are going to make a UI Kit with it to spread the fun.
         </p>
-      </main>
     </>
   );
 }

@@ -3,7 +3,6 @@
   border: 1px solid #CCCCCC;
   border-radius:25px;
   margin: 10px;
-  min-width: 300px;
 }
 
 .image-media {
@@ -11,7 +10,6 @@
   height:auto;
   max-height:300px;
   min-width: 300px;
-  min-height: 350px;
 }
 
 .video-media {
@@ -19,15 +17,25 @@
   height:auto;
   max-height:300px;
   min-width: 300px;
-  min-height: 350px;
 }
 
-.html-media {
-  max-width:350px;
-  height:auto;
-  max-height:400px;
-  min-width: 300px;
-  min-height: 350px;
+/** https://www.benmarshall.me/responsive-iframes/ **/
+.iframe-container {
+  min-width: 70vw;
+  min-height: 70vh;
+  overflow: hidden;
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.iframe-container .html-media {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .json-media {

@@ -7,7 +7,6 @@ export default function UiKit() {
   const { theme, setTheme } = useTheme();
   return (
     <>
-      <main>
         <h3 className={`h3 h3-${theme.toString().toLowerCase()}`}>UiKit: There will be UiKit here</h3>
         <p>
           UiKit components (WIP)
@@ -73,7 +72,6 @@ export default function UiKit() {
             <li>video to qr code</li>
           </ul>
         </p>
-      </main>
     </>
   );
 }

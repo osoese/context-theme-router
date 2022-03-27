@@ -107,15 +107,13 @@ function App() {
                     </ul>
                   </div>
                   <div className="header-page-wrapper">
-                    <div style={{marginLeft:'0px'}}>
-                      <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="about" element={<About />} />
-                        <Route path="play" element={<Play />} />
-                        <Route path="cicd" element={<CiCd />} />
-                        <Route path="ui-kit" element={<UiKit />} />
-                      </Routes>
-                    </div>
+                    <Routes>
+                      <Route path="/" element={<Home />} />
+                      <Route path="about" element={<About />} />
+                      <Route path="play" element={<Play />} />
+                      <Route path="cicd" element={<CiCd />} />
+                      <Route path="ui-kit" element={<UiKit />} />
+                    </Routes>
                   </div>
                 </div>
               </div>

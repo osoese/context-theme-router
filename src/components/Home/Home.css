@@ -1,5 +1,8 @@
 .page-main {
-  width: 100%;
+  min-height: 10vw;
+  min-width: 80vw;
+  position:relative;
+  border:3px dashed red;
   --height: 200px;
 }
 

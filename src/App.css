@@ -43,7 +43,7 @@ ul li:hover {
   border-right: 0.5px solid green;
   border-left: 4px solid green;
   background-color: rgba(42, 189, 34, 0.35);
-  box-shadow: 15px -1px 30px -2px #2abd22;
+  box-shadow: 15px -1px 30px -2px rgba(26, 82, 23, 0.7);
 }
 
 .ul-li-light-active {
@@ -53,6 +53,7 @@ ul li:hover {
   margin-left: -4px;
   border-left: 4px solid purple;
   border-right: 0.5px solid purple;
+  box-shadow: 15px -1px 30px -2px purple;
 }
 
 .ul-li-dark {
@@ -68,7 +69,7 @@ ul li:hover {
   border-right: 0.5px solid green;
   border-left: 4px solid green;
   background-color: rgba(42, 189, 34, 0.35);
-  box-shadow: 15px -1px 30px -2px #2abd22;
+  box-shadow: 15px -1px 30px -2px rgba(26, 82, 23, 0.7);
 }
 
 .ul-li-dark-active {
@@ -78,6 +79,7 @@ ul li:hover {
   margin-left: -4px;
   border-left: 4px solid purple;
   border-right: 0.5px solid purple;
+  box-shadow: 15px -1px 30px -2px purple;
 }
 
 ul.header-left-nav {
@@ -160,6 +162,7 @@ nav:hover {
   padding:5px 12px;
   border-top: 4px solid purple;
   border-bottom: 0.5px solid purple;
+  box-shadow: 5px 10px 65px -2px purple;
 }
 
 .Nav-dark {
@@ -181,6 +184,7 @@ nav:hover {
   padding:5px 12px;
   border-top: 4px solid purple;
   border-bottom: 0.5px solid purple;
+  box-shadow: 5px 10px 65px -2px purple;
 }
 
 .nav-text-extension {
@@ -197,20 +201,25 @@ nav:hover {
 }
 
 .header-page-wrapper {
-  padding-left:3%;
-  padding-right:3%;
-  contain:content;
+  min-width: 90vw;
+  padding-left:4%;
+  padding-right:4%;
+  --contain:content;
   margin-top: 0px;
+  margin-left:0px;
+  --max-width: 50vw;
+  --border: 3px dashed #CCCCCC;
+  border-radius: 20px;
+  overflow:none;
 }
 
+.header-page-wrapper p {
+  width:90%;
+}
 
 .header-page-container {
   padding: 0.5%;
   margin: 1%;
-}
-
-.page-wrapper {
-
 }
 
 .header-fiex-wrapper {
