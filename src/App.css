@@ -238,11 +238,6 @@ nav:hover {
   min-width: 75vw;
 }
 
-.header-page-wrapper .wr-visible .iframe-container {
-  border:2px solid #CCCCCC;
-  scale:transform(80,80)
-}
-
 .header-page-container {
   padding: 0.5%;
   margin: 1%;
