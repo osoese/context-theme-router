@@ -60,7 +60,7 @@ function App() {
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}
                           to="/">
-                            <div>🏠</div>
+                            <div className={`nav-tab en-${navVisible}`}>🏠</div>
                             <div className={`nav-text-extension ${navVisible}`}>home</div>
                         </NavLink>
                       </li>
@@ -68,7 +68,7 @@ function App() {
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}
                           to="/about">
-                          <div>⚛</div>
+                          <div className={`nav-tab en-${navVisible}`}>⚛</div>
                           <div className={`nav-text-extension ${navVisible}`}>about</div>
                         </NavLink>
                       </li>
@@ -76,7 +76,7 @@ function App() {
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}
                           to="/play">
-                          <div>▶</div>
+                          <div className={`nav-tab en-${navVisible}`}>▶</div>
                           <div className={`nav-text-extension ${navVisible}`}>play</div>
                         </NavLink>
                       </li>
@@ -84,7 +84,7 @@ function App() {
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}
                           to="/cicd">
-                          <div>⚡</div>
+                          <div className={`nav-tab en-${navVisible}`}>⚡</div>
                           <div className={`nav-text-extension ${navVisible}`}>cicd</div>
                         </NavLink>
                       </li>
@@ -92,7 +92,7 @@ function App() {
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}
                           to="/ui-kit">
-                          <div>♒</div>
+                          <div className={`nav-tab en-${navVisible}`}>♒</div>
                           <div className={`nav-text-extension ${navVisible}`}>UiKit</div>
                         </NavLink>
                       </li>
@@ -100,13 +100,13 @@ function App() {
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}
                           to="/about">
-                            <div>🚀</div>
+                            <div className={`nav-tab en-${navVisible}`}>🚀</div>
                             <div className={`nav-text-extension ${navVisible}`}>about</div>
                           </NavLink>
                       </li>
                     </ul>
                   </div>
-                  <div className="header-page-wrapper">
+                  <div className={`header-page-wrapper wr-${navVisible}`}>
                     <Routes>
                       <Route path="/" element={<Home />} />
                       <Route path="about" element={<About />} />

@@ -14,9 +14,15 @@ export default function Play() {
         was a couple games.
       </p>
       <p>toc tac toe</p>
-      
-        <Media scale='80' height='400' url="https://osoese.github.io/tic-tac-toe-game.html" />
 
+        <Media scale='80' height='400' url="https://ipfs.io/ipfs/QmeBbQMeK4YLYsqcBQL5DhhPQAzMnMQ3pu81XhSKxR9Wcw" />
+        {/** <Media scale='80' height='400' url="https://osoese.github.io/tic-tac-toe-game.html" /> **/}
+
+
+        {/** this does not scale well **/}
+        {/** <Media scale='80' height='400' url="https://osoese.github.io/css-3d3.html" /> **/}
+
+        
     </>
   );
 }
