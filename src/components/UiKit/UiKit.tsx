@@ -42,7 +42,7 @@ export default function UiKit() {
 
 
                 <div className="uiKit-media-wrap">
-                  <Media url="https://ipfs.io/ipfs/QmQJQ5TZQeVQzzjhSTjrJVPxomAdWGzS4gsrND4XTsyewy" />
+                  <Media url="https://ipfs.io/ipfs/QmXiwDZXtqm3zXWMdaZS1XgK9KxaNVoLiTMawG8HwQbLVg" />
                 </div>
 
 

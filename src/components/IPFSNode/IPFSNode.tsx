@@ -42,6 +42,7 @@ const IPFSNode = (props:any) => {
             <span style={{fontSize:'1.7rem',fontWeight:'bold'}}>IPFS Node</span>
             <span style={{fontSize:'1.7rem',color:'blue',fontWeight:'bold'}}>online:</span>
             <span className={`${(props.myNode.isOnline)?'yes':'no'}`}>{(props.myNode.isOnline)?'yes':'no'}</span>
+            <input id="uploadFile" type="file" onChange={(e:any)=>{props.ipfsFileUpload(e.target.files[0])}} />
           </p>
         </div>
       </main>

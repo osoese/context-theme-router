@@ -1,8 +1,10 @@
 import * as React from 'react';
+import { useState } from "react";
 import './App.css';
 import { Routes, Route, NavLink } from "react-router-dom";
 import { ThemeContext, Theme } from './ThemeContext';
 import { useLocalStorage } from "./hooks/useLocalStorage";
+import { Transition } from 'react-transition-group';
 import IPFSNode from './components/IPFSNode/IPFSNode';
 import Mode from './components/Mode/Mode';
 import PageOne from './pages/PageOne/PageOne';
@@ -12,16 +14,42 @@ import Play from './components/Play/Play';
 import CiCd from './components/CiCd/CiCd';
 import UiKit from './components/UiKit/UiKit';
 import Head from './components/Head/Head';
+import Modal from "./components/Modal/Modal";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("storeTheme",Theme.Light);
   const [routeTrack, setRouteTrack] = useLocalStorage("storeRouteTrack",'/');
   const [navVisible, setNavVisible] = useLocalStorage("visibleNav","visible");
   const [myNode, setMyNode] = React.useState({});
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalCID, setModalCID] = useState(`QmXiwDZXtqm3zXWMdaZS1XgK9KxaNVoLiTMawG8HwQbLVg`)
+
+  const ipfsFileUpload = async (fileBuffer:Buffer) => {
+    console.log(`ipfsFileUpload function`,fileBuffer.toString());
+    const node:any = myNode;
+    let status = node.isOnline() ? 'online' : 'offline';
+    console.log(`Node status: ${status}`);
+
+      if(status == 'online'){
+        console.log(`status was online`)
+        console.log(fileBuffer.toString())
+        const { cid } = await node.add(fileBuffer)
+        await console.log(`successfully stored ${cid}`, cid);
+        await setModalCID(cid);
+        await setIsOpen(true);
+      }else{
+        console.log(`node is not online`)
+      }
+  }
+
   return (
     <>
+    <button className="primaryBtn" onClick={() => setIsOpen(true)}>
+      Open Modal
+    </button>
+    {isOpen && <Modal setIsOpen={setIsOpen} cid={modalCID}/>}
     <ThemeContext.Provider value={{ theme, setTheme }}>
-    <IPFSNode myNode={myNode} setMyNode={setMyNode} />
+    <IPFSNode myNode={myNode} setMyNode={setMyNode} ipfsFileUpload={ipfsFileUpload} />
       {/*** <RouteTrackContext.Provider value{{ routeTrack, setRouteTrack }}> ***/}
       <div className="App">
         <header className={`App-header App-header-${theme.toString().toLowerCase()}`}>
@@ -29,6 +57,7 @@ function App() {
             <div className="header-fiex-wrapper">
               <div className={`header-nav-column ${navVisible}`}>
                 <div className="header-route-container">
+
                   <nav>
                     <input
                       style={{marginTop:'12px',fontSize:'1.5rem'}}
@@ -52,9 +81,11 @@ function App() {
                       className={({ isActive }) => (isActive ? `Nav-${theme.toString().toLowerCase()}-active` : `Nav-${theme.toString().toLowerCase()}`)}
                       to="/ui-kit">UiKit</NavLink>
                   </nav>
+
                 </div>
                 <div style={{display:'flex',flexDirection:'row'}}>
                   <div>
+                    <Transition in={(navVisible==='visible')?true:false} timeout={1500}>
                     <ul className="header-left-nav">
                       <li className={`home not-wrapped`}>
                         <NavLink
@@ -105,6 +136,7 @@ function App() {
                           </NavLink>
                       </li>
                     </ul>
+                    </Transition>
                   </div>
                   <div className={`header-page-wrapper wr-${navVisible}`}>
                     <Routes>
