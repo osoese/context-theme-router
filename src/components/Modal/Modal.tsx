@@ -15,7 +15,7 @@ const Modal = (props:any) => {
             <span>X</span>
           </button>
           <div className={`modalContent`}>
-            Click your media <a href={`https://ipfs.io/ipfs/${props.cid}`} target="new">{props.cid}</a>
+            Click your media <a href={`https://ipfs.io/ipfs/${props.cid}`} target="new">{props.cid.toString()}</a>
             <div className="modalMediaWrapper">
               <Media url={`https://ipfs.io/ipfs/${props.cid}`} />
             </div>
