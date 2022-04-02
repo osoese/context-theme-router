@@ -1,7 +1,7 @@
-import { useTheme, Theme } from '../../ThemeContext';
+import { useTheme } from '../../ThemeContext';
 import Media from '../../components/Media/Media';
 export default function Play() {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   return (
     <>
       <h3 className={`h3 h3-${theme.toString().toLowerCase()}`}>Play: I will be playing here</h3>

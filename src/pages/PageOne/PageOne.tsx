@@ -6,7 +6,7 @@ import Media from '../../components/Media/Media';
 import Mode from '../../components/Mode/Mode';
 
 const PageOne = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   console.log(`page one function rendering ${theme}`);
 
   return (

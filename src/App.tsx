@@ -15,6 +15,7 @@ import CiCd from './components/CiCd/CiCd';
 import UiKit from './components/UiKit/UiKit';
 import Head from './components/Head/Head';
 import Modal from "./components/Modal/Modal";
+import { Web3Button, Web3Address } from './components/'
 
 function App() {
   const [theme, setTheme] = useLocalStorage("storeTheme",Theme.Light);
@@ -30,7 +31,7 @@ function App() {
     let status = node.isOnline() ? 'online' : 'offline';
     console.log(`Node status: ${status}`);
 
-      if(status == 'online'){
+      if(status === 'online'){
         console.log(`status was online`)
         console.log(fileBuffer.toString())
         const { cid } = await node.add(fileBuffer)
@@ -52,6 +53,7 @@ function App() {
 
   return (
     <>
+    <Web3Button />
     <button className="primaryBtn" onClick={() => setIsOpen(true)}>
       Open Modal
     </button>
