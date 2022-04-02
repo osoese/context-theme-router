@@ -15,3 +15,15 @@
 .head-container div {
   padding: 5px;
 }
+
+.span-highlight-dark {
+  padding:3px;
+  background-color:#FFFFFF;
+  color:blue;
+}
+
+.span-highlight-light {
+  padding:3px;
+  background-color:#000000;
+  color:orange;
+}

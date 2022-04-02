@@ -9,11 +9,6 @@ const IPFSNode = (props:any) => {
 
   const [nodeSet, setNodeSet] = useState(false);
 
-  //const cid = results[0].hash
-  //console.log('CID created via ipfs.add:', cid)
-  //const data = await node.cat(cid)
-  //console.log('Data read back via ipfs.cat:', new TextDecoder().decode(data))
-
   useEffect(()=> {
     if (window?.Ipfs && !nodeSet) {
       window.Ipfs.create({

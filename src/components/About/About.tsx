@@ -10,7 +10,7 @@ export default function About() {
       <p>This site is deployed on ipfs, using react.</p>
       <p>
         It's getting uglier but better, I promise. If you stop by every so often
-        you notice I a modernizing my css. Maybe too slowly for some, but I'm
+        you notice I am modernizing my css. Maybe too slowly for some, but I'm
         not really on a timeline here. Most of the focus is on ipfs interaction,
         I want to add in the web3 interaction I've been working with, and then I'm
         improving react, html, and css

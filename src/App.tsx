@@ -25,7 +25,7 @@ function App() {
   const [modalCID, setModalCID] = useState(`QmXiwDZXtqm3zXWMdaZS1XgK9KxaNVoLiTMawG8HwQbLVg`)
 
   const ipfsFileUpload = async (fileBuffer:Buffer) => {
-    console.log(`ipfsFileUpload function`,fileBuffer.toString());
+    console.log(`ipfsFileUpload called in App.tsx`,fileBuffer.toString());
     const node:any = myNode;
     let status = node.isOnline() ? 'online' : 'offline';
     console.log(`Node status: ${status}`);
@@ -34,9 +34,17 @@ function App() {
         console.log(`status was online`)
         console.log(fileBuffer.toString())
         const { cid } = await node.add(fileBuffer)
-        await console.log(`successfully stored ${cid}`, cid);
+        await console.log(`successfully stored ${cid.toString()}`);
         await setModalCID(cid);
         await setIsOpen(true);
+        // The address of your files.
+        const addr = `/ipfs/${cid.toString()}`
+
+        const res = await node.name.publish(addr)
+        // You now have a res which contains two fields:
+        //   - name: the name under which the content was published.
+        //   - value: the "real" address to which Name points.
+        await console.log(`https://ipfs.io/ipns/${res.name}`)
       }else{
         console.log(`node is not online`)
       }

@@ -13,7 +13,7 @@ export default function Play() {
         hash). Well, I did call this page play. One of the things I built to play
         was a couple games.
       </p>
-      <p>toc tac toe</p>
+      <p>tic tac toe</p>
 
         <Media scale='80' height='400' url="https://ipfs.io/ipfs/QmeBbQMeK4YLYsqcBQL5DhhPQAzMnMQ3pu81XhSKxR9Wcw" />
         {/** <Media scale='80' height='400' url="https://osoese.github.io/tic-tac-toe-game.html" /> **/}
@@ -22,7 +22,7 @@ export default function Play() {
         {/** this does not scale well **/}
         {/** <Media scale='80' height='400' url="https://osoese.github.io/css-3d3.html" /> **/}
 
-        
+
     </>
   );
 }
