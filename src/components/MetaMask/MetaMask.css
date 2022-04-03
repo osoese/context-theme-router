@@ -1,10 +1,10 @@
-.nodeWrapper {
+.metaMaskWrapper {
   padding-top: 2px;
   padding-left: 10px;
-  margin: 2px;
-  margin-left: 30px;
+  padding-right: 10px;
+  --margin: 2px;
+  --margin-left: -30px;
   margin-bottom: 0px;
-  display:inline-block;
   border-top:0.5px solid #CCCCCC;
   border-left:0.5px solid #CCCCCC;
   border-right:0.5px solid #CCCCCC;
@@ -12,22 +12,6 @@
   border-top-left-radius: 20px;
   max-width:240px;
   max-height:50px;
-  min-height: 50px;
+  min-height:52px;
   background-color: rgba(29, 161, 247, 0.65);
-}
-
-.nodeWrapper h3 {
-  padding: 0px;
-  margin: 0px;
-}
-
-.nodeWrapper p {
-  padding: 0px;
-  margin: 0px;
-  font-size: 2rem;
-}
-
-.yes {
-  color: green;
-  font-size: 1.7rem;
 }

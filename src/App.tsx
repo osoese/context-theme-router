@@ -5,6 +5,7 @@ import { Routes, Route, NavLink } from "react-router-dom";
 import { ThemeContext, Theme } from './ThemeContext';
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import { Transition } from 'react-transition-group';
+import MetaMask from './components/MetaMask/MetaMask';
 import IPFSNode from './components/IPFSNode/IPFSNode';
 import Mode from './components/Mode/Mode';
 import PageOne from './pages/PageOne/PageOne';
@@ -16,13 +17,15 @@ import UiKit from './components/UiKit/UiKit';
 import Head from './components/Head/Head';
 import Modal from "./components/Modal/Modal";
 
+
 function App() {
   const [theme, setTheme] = useLocalStorage("storeTheme",Theme.Light);
   const [routeTrack, setRouteTrack] = useLocalStorage("storeRouteTrack",'/');
   const [navVisible, setNavVisible] = useLocalStorage("visibleNav","visible");
+  const [navHover, setNavHover] = useState(false);
   const [myNode, setMyNode] = React.useState({});
   const [isOpen, setIsOpen] = useState(false);
-  const [modalCID, setModalCID] = useState(`QmXiwDZXtqm3zXWMdaZS1XgK9KxaNVoLiTMawG8HwQbLVg`)
+  const [modalCID, setModalCID] = useState(`QmXiwDZXtqm3zXWMdaZS1XgK9KxaNVoLiTMawG8HwQbLVg`);
 
   const ipfsFileUpload = async (fileBuffer:Buffer) => {
     console.log(`ipfsFileUpload called in App.tsx`,fileBuffer.toString());
@@ -30,7 +33,7 @@ function App() {
     let status = node.isOnline() ? 'online' : 'offline';
     console.log(`Node status: ${status}`);
 
-      if(status == 'online'){
+      if(status === 'online'){
         console.log(`status was online`)
         console.log(fileBuffer.toString())
         const { cid } = await node.add(fileBuffer)
@@ -57,7 +60,10 @@ function App() {
     </button>
     {isOpen && <Modal setIsOpen={setIsOpen} cid={modalCID}/>}
     <ThemeContext.Provider value={{ theme, setTheme }}>
-    <IPFSNode myNode={myNode} setMyNode={setMyNode} ipfsFileUpload={ipfsFileUpload} />
+    <div style={{width:'500px',margin:'0px',padding:'0px',display:'flex',flexDirection:'row',alignItems:'flex-start'}}>
+      <IPFSNode myNode={myNode} setMyNode={setMyNode} ipfsFileUpload={ipfsFileUpload} />
+      <MetaMask />
+    </div>
       {/*** <RouteTrackContext.Provider value{{ routeTrack, setRouteTrack }}> ***/}
       <div className="App">
         <header className={`App-header App-header-${theme.toString().toLowerCase()}`}>
@@ -66,7 +72,9 @@ function App() {
               <div className={`header-nav-column ${navVisible}`}>
                 <div className="header-route-container">
 
-                  <nav>
+                  <nav
+                    className={`hover-${navHover.toString()}`}
+                    onMouseEnter={()=>setNavHover(true)} onMouseLeave={()=>setNavHover(false)}>
                     <input
                       style={{marginTop:'12px',fontSize:'1.5rem'}}
                       type="checkbox"
@@ -94,7 +102,9 @@ function App() {
                 <div style={{display:'flex',flexDirection:'row'}}>
                   <div>
                     <Transition in={(navVisible==='visible')?true:false} timeout={1500}>
-                    <ul className="header-left-nav">
+                    <ul
+                      className={`header-left-nav ul-hover-${navHover.toString()}`}
+                      onMouseEnter={()=>setNavHover(true)} onMouseLeave={()=>setNavHover(false)}>
                       <li className={`home not-wrapped`}>
                         <NavLink
                           className={({ isActive }) => (isActive ? `ul-li-${theme.toString().toLowerCase()}-active` : `ul-li-${theme.toString().toLowerCase()}`)}

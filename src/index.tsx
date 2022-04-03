@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import { HashRouter } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import { MetaMaskProvider } from "metamask-react";
 
 (function(){
     var originallog = console.log;
@@ -16,7 +17,9 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter basename="/">
-      <App />
+      <MetaMaskProvider>
+        <App />
+      </MetaMaskProvider>
     </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
